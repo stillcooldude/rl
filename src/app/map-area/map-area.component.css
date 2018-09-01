@@ -1,0 +1,55 @@
+#map-area {
+  margin: 15px 0 40px 60px;
+  /* width: 65%; */
+  height: 600px;
+  /* border: 1px solid gray;  */
+  border-radius: 3px;
+}
+
+#map-type {
+  width: 100px;
+  margin: 0 40px;
+}
+
+.btn {
+  margin: 3px 6px;
+}
+/* button {
+  color: #34495E;
+  background: transparent;
+  border: 2px solid #2471A3;
+  border-radius: 4px;
+  margin: 4px 9px;
+  padding: 5px;
+  transition-duration: 0.2s;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+button:hover {
+    background-color: #2471A3;
+    color: #FBFCFC;
+}
+
+button:disabled {
+  color: #34495E;
+  background-color: #BFC9CA;
+  border: 2px solid #BFC9CA;
+  cursor: default;
+} */
+
+
+
+.buttons {
+  display:inline;
+}
+
+div.options {
+    display:inline-block;
+    margin:0 20px;
+    width: 140px;
+}
+
+div.block {
+    display:inline-block;
+}

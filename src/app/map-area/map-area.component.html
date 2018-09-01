@@ -1,0 +1,35 @@
+<div class="row">
+  <div class="col-7" id="map-area" #gmap></div>
+  <segments-desc-editor class="col-4"></segments-desc-editor>
+</div>
+
+<div class="block" id="map-type">
+  <button class="btn btn-primary" (click)="setMapType('terrain')">Terrain</button>
+  <button class="btn btn-primary" (click)="setMapType('satellite')">Satellite</button>
+  <button class="btn btn-primary" (click)="setMapType('roadmap')">Road Map</button>
+</div>
+
+<div class="buttons">
+
+  <button class="btn btn-primary" (click)="undo()">Undo</button>
+  <button class="btn btn-primary" (click)="remove()">Remove</button>
+
+  <div class="options">
+    <!-- [disabled]="!(viewData.markerStorage.length > 1)" -->
+    <button class="btn btn-primary" (click)="setMarkerType('inter')">Intermediate</button>
+    <button class="btn btn-primary" (click)="setMarkerType('checkpoint')">Checkpoint</button>
+    <button class="btn btn-primary" (click)="setMarkerType('finish')">
+      <img [src]='viewData.finishIcon.url' height="15" width="15">End</button>
+  </div>
+</div>
+
+<div class="options">
+  <div>
+    <input type="radio" name="connection" id="follow-road" (change)="followRoad(true)" checked>
+    <label for='follow-road'>Follow road</label>
+  </div>
+  <div>
+    <input type="radio" name="connection" id="line" (change)="followRoad(false)">
+    <label for='line'>Straight-line</label>
+  </div>
+</div>
