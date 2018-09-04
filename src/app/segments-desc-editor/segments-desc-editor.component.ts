@@ -32,4 +32,8 @@ export class SegmentsDescEditorComponent implements OnInit {
     }
     console.log(element);
   }
+
+  elementClicked(event){
+    console.log(event);
+  }
 }

@@ -1,4 +1,4 @@
-/// <reference path="C:/Users/Dude/tour-logistic/node_modules/@types/googlemaps/index.d.ts" />
+/// <reference path="/Users/constantine/Repository/rl/node_modules/@types/googlemaps/index.d.ts" />
 import { Injectable } from '@angular/core';
 import { Component, OnInit, ViewChild, AfterViewInit } from '@angular/core';
 import { Marker } from '../../shared/models/marker';

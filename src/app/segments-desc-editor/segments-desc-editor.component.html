@@ -1,6 +1,9 @@
 <div id="segments">
-  <div *ngFor="let element of elements">{{element.type}}
-    <segment-editor></segment-editor>
+  <div *ngFor="let element of elements">
+      <ng-container [ngSwitch]='element.type'>
+          <point-editor #point *ngSwitchCase="'point'" [point]='element' (click)="point.onClick()"></point-editor>
+          <segment-editor *ngSwitchCase="'segment'" [segment]='element'></segment-editor>
+        </ng-container>
   </div>
   <!-- <input type="text" (keyup)="keyUpHandle(text.value)" #text> -->
 </div>

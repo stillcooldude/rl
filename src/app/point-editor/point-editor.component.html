@@ -1,0 +1,22 @@
+<div id="wrap">
+    <ng-container [ngSwitch]='pointElement.item.marker.type'>
+        <h4 *ngSwitchCase="'start'">Beginning point</h4>
+        <h4 *ngSwitchCase="'finish'">End point</h4>
+      </ng-container>
+  <form>
+    <!-- add date -->
+      <ng-container [ngSwitch]='pointElement.item.marker.type'>
+          <ng-container *ngSwitchCase="'start'">
+              <label for="time">Departure time: </label>
+              <input id="time" [(ngModel)]="pointElement.item.time" type='time' name="departure-time"><br>
+          </ng-container>
+          <ng-container *ngSwitchCase="'finish'">
+              <label for="time">Arrival time: </label>
+              <input id="time" [(ngModel)]="pointElement.item.time" type='time' name="arrival-time"><br>
+            </ng-container>
+        </ng-container>
+      
+      <label for="comment">Comment</label>
+      <textarea id="comment" [(ngModel)]="pointElement.item.comment" name="comment"></textarea>
+  </form>
+</div>

@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 
 
 import { AppComponent } from './app.component';
@@ -11,6 +12,7 @@ import { MarkerStorage } from './shared/models/markerStorage';
 import { SectionStorage } from './shared/models/sectionStorage';
 import { SegmentStorage } from './shared/models/segmentStorage';
 import { SegmentsDescEditorComponent } from './segments-desc-editor/segments-desc-editor.component';
+import { PointEditorComponent } from './point-editor/point-editor.component';
 import { SegmentEditorComponent } from './segment-editor/segment-editor.component';
 
 @NgModule({
@@ -19,10 +21,12 @@ import { SegmentEditorComponent } from './segment-editor/segment-editor.componen
     NavBarComponent,
     MapAreaComponent,
     SegmentsDescEditorComponent,
-    SegmentEditorComponent,
+    PointEditorComponent,
+    SegmentEditorComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    FormsModule
   ],
   providers: [
     ViewDataService,

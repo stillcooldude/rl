@@ -1,0 +1,36 @@
+#wrap {
+    border:1px solid blue;
+    padding-left: 10px;
+    margin-bottom: 15px;
+    border-radius: 4px;
+    background-color:#D7DBDD;
+}
+
+input {
+    margin-left: 10px;
+    background-color: transparent;
+    border: 0px solid;
+    height: 20px;
+    width: 160px;
+    color: #566573;
+}
+
+input:focus {
+    outline: none;
+    color: #212F3C;
+}
+
+textarea {
+    width: 90%;
+    border-radius: 2px;
+    border:1px #797D7F solid;
+    margin-top:-10px;
+    font-size: 0.7rem;
+    resize:none;
+    background-color:transparent;
+}
+
+h4 {
+    margin-bottom:0px;
+}
+

@@ -1,4 +1,4 @@
-/// <reference path="C:/Users/Dude/tour-logistic/node_modules/@types/googlemaps/index.d.ts" />
+/// <reference path="/Users/constantine/Repository/rl/node_modules/@types/googlemaps/index.d.ts" />
 import { Injectable, EventEmitter } from '@angular/core';
 import { Marker } from 'src/app/shared/models/marker';
 import { ViewDataService } from './view-data.service';

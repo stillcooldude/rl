@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { SegmentElement } from '../shared/models/element';
 
 @Component({
   selector: 'segment-editor',
@@ -11,5 +12,8 @@ export class SegmentEditorComponent implements OnInit {
 
   ngOnInit() {
   }
+
+  @Input()
+  segment: SegmentElement;
 
 }
