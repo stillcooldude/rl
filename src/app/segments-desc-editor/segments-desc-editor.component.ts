@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 import { MapService } from '../core/service/map.service';
 import { Segment } from '../shared/models/segment';
 import { ViewDataService } from '../core/service/view-data.service';
@@ -12,12 +12,17 @@ import { Element, PointElement, SegmentElement } from '../shared/models/element'
 export class SegmentsDescEditorComponent implements OnInit {
 
   elements = [];
+  isRouteFinished = false;
 
   constructor(private viewData: ViewDataService, private mapService: MapService) { }
 
   ngOnInit() {
     this.mapService.elementCreated.subscribe(value => {
       this.elementsChanged(value);
+    })
+    this.mapService.isRouteFinished.subscribe(value => {
+      this.isRouteFinished = value;
+      console.log(value);
     })
   }
 
@@ -35,5 +40,9 @@ export class SegmentsDescEditorComponent implements OnInit {
 
   elementClicked(event){
     console.log(event);
+  }
+
+  saveRoute(){
+    console.log(JSON.stringify(this.viewData.segmentStorage));
   }
 }

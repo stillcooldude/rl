@@ -10,6 +10,8 @@ export class Section {
     polyline;
     map: google.maps.Map;
     distance:number;
+    time;
+    comment;
 
     constructor(public marker: Marker, public polylineOptions?: google.maps.PolylineOptions) {
     }
@@ -42,10 +44,19 @@ export class Section {
             this.marker.rmGoogleInstance();
         }
     };
-    // toJSON() {
-    //     return {
-    //         markerType: this.markerType,
-    //         path: serializePath(this.path)
-    //     };
-    // };
+    
+    toJSON(){
+        var object = {
+            marker: this.marker,
+            path: this.path,
+            distance: this.distance
+        }
+        if(this.comment) {
+            object["comment"] = this.comment;
+        }
+        if(this.time) {
+            object["time"] = this.time;
+        }
+        return object;
+    }
 }

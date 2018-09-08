@@ -1,29 +1,5 @@
 - убрать reference path, или заменить...
-
-
-backup 
-get lastSection(): Section{
-        if(this.last.length == 0){
-            return this.penult.last;
-        }
-        if(this.last.length > 0){
-            return this.last.last;
-        } else {
-            console.trace();
-            console.log(this);
-            console.log("COULDN'T HAPPEND!!");
-            return this.penult.last;
-        }
-        
-    }
-
-    get penultSection(): Section{
-        if(this.last.length == 0){
-            return this.penult.penult;
-        }
-        if(this.last.length > 1){
-            return this.last.penult;
-        } else {
-            return this.penult.last;
-        }
-    }
+- checkpoint to checkpoint FIX
+- изменение дистанции (заменить динамическое вычисление, на вычисление в методе)
+- undo, clear
+- icons for point's type

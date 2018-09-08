@@ -14,6 +14,7 @@ export class MapService {
 
   directionsService: google.maps.DirectionsService;
   elementCreated = new EventEmitter(true);
+  isRouteFinished = new EventEmitter();
   
   constructor(private viewData: ViewDataService) {
     this.directionsService = new google.maps.DirectionsService();
@@ -38,6 +39,7 @@ export class MapService {
         if (this.viewData.markerType === "finish") {
           google.maps.event.clearListeners(this.viewData.map, 'click');
           this.viewData.map.setOptions({ draggableCursor: 'auto' });
+          this.isRouteFinished.emit(true);
           console.log(this.viewData.segmentStorage);
         }
         else {

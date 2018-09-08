@@ -51,6 +51,13 @@ export class Segment {
         return result;
     }
 
+
+    toJSON(){
+        return {
+            sections: this.sections,
+            comment: this.comment
+        };
+    }
     // constructor(id,sections){
     //     this.id = id;
     //     this.name = $`snippet #${id}`;

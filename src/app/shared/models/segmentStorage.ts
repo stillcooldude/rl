@@ -2,10 +2,11 @@
 
 import { Segment } from "./segment";
 import { Section } from "./section";
+import { Deserializable } from "../deserializable";
 
 // import { } from '@types/googlemaps';
 
-export class SegmentStorage {
+export class SegmentStorage implements Deserializable {
 
     segments: Segment[] = [];
     map: google.maps.Map;
@@ -62,5 +63,14 @@ export class SegmentStorage {
             }
         });
         return result;
+    }
+
+    toJSON(){
+        return {segments: this.segments};
+    }
+
+    deserialize(object) {
+        console.log("ERROR!!!!")
+        return this;
     }
 }
