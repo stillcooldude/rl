@@ -14,6 +14,7 @@ import { SegmentStorage } from './shared/models/segmentStorage';
 import { SegmentsDescEditorComponent } from './segments-desc-editor/segments-desc-editor.component';
 import { PointEditorComponent } from './point-editor/point-editor.component';
 import { SegmentEditorComponent } from './segment-editor/segment-editor.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -26,14 +27,15 @@ import { SegmentEditorComponent } from './segment-editor/segment-editor.componen
   ],
   imports: [
     BrowserModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
   providers: [
     ViewDataService,
     MapService,
     MarkerStorage,
     SectionStorage,
-    SegmentStorage
+    SegmentStorage,
   ],
   bootstrap: [AppComponent]
 })

@@ -1,4 +1,4 @@
-/// <reference path="/Users/constantine/Repository/rl/node_modules/@types/googlemaps/index.d.ts" />
+///<reference path="/Users/constantine/Workspace/Repository/tour-logistic/ClientApp/node_modules/@types/googlemaps/index.d.ts" />
 
 import { Segment } from "./segment";
 import { Section } from "./section";

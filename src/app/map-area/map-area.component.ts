@@ -1,4 +1,4 @@
-/// <reference path="/Users/constantine/Repository/rl/node_modules/@types/googlemaps/index.d.ts" />
+/// <reference path="/Users/constantine/Workspace/Repository/tour-logistic/ClientApp/node_modules/@types/googlemaps/index.d.ts" />
 import { Component, OnInit, ViewChild, AfterViewInit, EventEmitter, HostListener } from '@angular/core';
 import { ViewDataService } from './../core/service/view-data.service';
 import { Marker } from '../shared/models/marker';
