@@ -1,6 +1,6 @@
 import { Section } from "./section";
 
-export class SectionStorage {//for in capsulating certain methods
+export class SectionStorage {//for incapsulating certain methods
 
     sections: Section[] = [];
     map : google.maps.Map;

@@ -1,4 +1,4 @@
-/// <reference path="/Users/constantine/Workspace/Repository/tour-logistic/ClientApp/node_modules/@types/googlemaps/index.d.ts" />
+/// <reference path="C:/Users/Dude/Repository/tl-full/ClientApp/node_modules/@types/googlemaps/index.d.ts" />
 // import { } from '@types/googlemaps';
 
 export class Marker {
